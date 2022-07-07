@@ -1429,6 +1429,10 @@ figure {
 img {
     vertical-align: middle
 }
+#bloc-2-services > div > div:nth-child(1) > div > img, #bloc-2-services > div > div.row.voffset-lg.voffset > div > img
+{
+    max-width: 100%;
+}
 
 .carousel-inner>.item>a>img,
 .carousel-inner>.item>img,
@@ -2012,7 +2016,7 @@ pre code {
 
 .row {
     margin-right: -15px;
-    margin-left: -15px
+    
 }
 
 .col-lg-1,
