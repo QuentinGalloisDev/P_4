@@ -284,6 +284,7 @@ form label
 form label input, form label textarea
 {
 	margin-left: 15px;
+	width: 250px;
 }
 .form-group
 {
