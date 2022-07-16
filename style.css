@@ -5,9 +5,17 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+.container {
+  padding: 0 50px;
 }
 p {
-  font-size: 17px;
+  font-size: 20px;
   color: #000;
   text-align: center;
 }
@@ -23,7 +31,7 @@ nav {
 }
 nav ul {
   display: flex;
-  width: 180px;
+  width: 190px;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -36,6 +44,9 @@ nav ul li {
 nav ul li:hover {
   transform: scale(1.2);
 }
+ul {
+  list-style-type: none;
+}
 
 a {
   text-decoration: none;
@@ -45,12 +56,15 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+div > div:nth-child(2) > div > img {
+  width: 100px;
+}
 .bg-banniere h1 {
   background-color: rgba(165, 147, 99, 0.5);
   padding: 4px;
 }
 .bg-banniere a {
-  background-color: #00000091;
+  background-color: #000000cf;
   padding: 12px;
   border-radius: 17px;
   color: #fff;
@@ -82,6 +96,7 @@ a:hover {
 
 .bg-repeat {
   background: repeat;
+  background-image: url(img/lines-h2-bg.png);
 }
 
 .bg-banniere {
@@ -122,6 +137,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
 .col-sm-4 {
   display: flex;
@@ -148,7 +164,8 @@ a:hover {
 .nav-center .navbar-header {
   width: 100%;
 }
-.ligne_1 {
+.ligne_1,
+.ligne_2 {
   display: flex;
   justify-content: space-evenly;
   max-width: 1000px;
@@ -160,9 +177,18 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
+.col-sm-6 a {
+  width: 100%;
+}
+.hero-bloc-text {
+  font-size: 26px;
+}
+.mg-lg {
+  font-size: 20px;
+}
 .hero-bloc-text,
 .mg-lg {
-  color: #df3602;
+  color: #040303;
 }
 
 .contact {
@@ -171,6 +197,10 @@ a:hover {
   border-radius: 17px;
   color: #fff;
   font-size: 19px;
+}
+.row p {
+  margin: 80px 0 60px 0;
+  font-size: 22px;
 }
 
 #bloc-2-services div.row.voffset-lg.voffset p {
@@ -188,7 +218,7 @@ body > div > div:nth-child(4) {
 }
 
 body > div > div:nth-child(4) > div > div {
-  background-color: rgba(165, 147, 99, 0.7);
+  background-color: rgba(165, 147, 99);
   padding: 40px 40px 40px 40px;
   max-width: 600px;
   margin: auto;
@@ -198,12 +228,44 @@ img {
   width: 20%;
   height: auto;
 }
-.ligne_1 img {
-  width: 333px;
-  object-fit: cover;
-  height: 234px;
+a[data-lightbox] {
+  position: relative;
+  display: block;
+  text-align: center;
 }
-
+a[data-lightbox]:hover::before {
+  content: "+";
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: 100;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.ligne_1 img,
+.ligne_2 img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+.ligne_1 img:hover,
+.ligne_2 img:hover {
+  opacity: 0.7;
+}
+.lost_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -228,13 +290,34 @@ footer a {
   font-size: 17px;
   color: #fff;
 }
+footer ul {
+  margin-bottom: 60px;
+}
+.reseaux a:hover span {
+  color: white;
+}
 
 /* CSS page de contact*/
 
+.bg-dots-bg {
+  background-image: url(img/dots-bg.png);
+}
+.bgc-atomic-tangerine:first-of-type {
+  background: url(img/texture-paper.png);
+  background-color: #f3976c;
+  background-size: 280px 280px;
+}
+.bgc-atomic-tangerine:nth-of-type(2) {
+  background-color: #f3976c;
+  background-size: 280px 280px;
+}
 form {
   display: flex;
   padding: 40px;
   flex-direction: column;
+}
+.form-group input {
+  margin-top: 7px;
 }
 form label {
   display: flex;
@@ -265,23 +348,38 @@ form button {
 }
 
 @media all and (max-width: 808px) {
+  body,
+  p {
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 21px;
+  }
   .page-container {
     width: 100%;
+  }
+  .bloc {
+    padding: 0 0;
   }
   .bloc .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  #message {
+    width: 80%;
+  }
   .voffset-lg {
     margin-top: 15px;
     flex-direction: column;
+    align-items: center;
   }
   #bloc-2-services > div > div.row.voffset-lg.voffset > div {
     width: 75%;
   }
-  .ligne_1 {
+
+  .ligne_1,
+  .ligne_2 {
     flex-direction: column;
   }
   .col-sm-4 {
