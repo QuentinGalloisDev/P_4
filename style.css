@@ -58,7 +58,7 @@ a:hover {
 }
 div > div:nth-child(2) > div > img {
   width: 100px;
-  height: auto;
+  height: 100%;
 }
 .bg-banniere h1 {
   background-color: rgba(165, 147, 99, 0.5);
