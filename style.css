@@ -341,6 +341,11 @@ form button {
   margin-left: 24px;
 }
 
+#bloc-8 > div > div > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media all and (max-width: 992px) {
   #bloc-2-services > div > div.row.voffset-lg.voffset > div {
     width: 65%;
