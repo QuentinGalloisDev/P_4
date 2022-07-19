@@ -58,6 +58,7 @@ a:hover {
 }
 div > div:nth-child(2) > div > img {
   width: 100px;
+  height: auto;
 }
 .bg-banniere h1 {
   background-color: rgba(165, 147, 99, 0.5);
@@ -255,7 +256,7 @@ a[data-lightbox]:hover::before {
 .ligne_2 img {
   width: 100%;
   object-fit: cover;
-  height: auto;
+  height: 100%;
 }
 .ligne_1 img:hover,
 .ligne_2 img:hover {
