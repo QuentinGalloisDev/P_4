@@ -61,14 +61,14 @@ div > div:nth-child(2) > div > img {
   height: 100%;
 }
 .bg-banniere h1 {
-  background-color: rgba(165, 147, 99, 0.5);
   padding: 4px;
 }
 .bg-banniere a {
-  background-color: #000000cf;
+  font-weight: 600;
   padding: 12px;
   border-radius: 17px;
-  color: #fff;
+  color: #000;
+  background-color: #f3976c;
   font-size: 19px;
   margin-bottom: 10px;
 }
@@ -193,10 +193,11 @@ div > div:nth-child(2) > div > img {
 }
 
 .contact {
-  background-color: #00000091;
+  text-decoration: underline;
+  font-weight: 600;
   padding: 10px;
   border-radius: 17px;
-  color: #fff;
+  color: #000;
   font-size: 19px;
 }
 .row p {
@@ -216,6 +217,11 @@ body > div > div:nth-child(4) {
 .texture {
   background-image: url(img/texture-paper.png);
   padding: 30px;
+}
+body > div > div:nth-child(4) p,
+body > div > div:nth-child(4) h2,
+body > div > div:nth-child(4) a {
+  color: #fff;
 }
 
 body > div > div:nth-child(4) > div > div {
@@ -271,7 +277,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #df3602;
+  background-color: #f3976c;
 }
 footer h3 {
   width: 100%;
@@ -288,8 +294,8 @@ footer .links_bottom {
   width: 1000px;
 }
 footer a {
-  font-size: 17px;
-  color: #fff;
+  font-size: 18px;
+  color: #372c2c;
 }
 footer ul {
   margin-bottom: 60px;
