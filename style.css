@@ -221,7 +221,7 @@ body > div > div:nth-child(4) {
 body > div > div:nth-child(4) p,
 body > div > div:nth-child(4) h2,
 body > div > div:nth-child(4) a {
-  color: #fff;
+  color: #000;
 }
 
 body > div > div:nth-child(4) > div > div {
